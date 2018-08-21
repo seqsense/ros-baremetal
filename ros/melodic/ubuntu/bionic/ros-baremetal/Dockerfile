@@ -1,6 +1,11 @@
 # This file is copied from https://github.com/osrf/docker_images/
 FROM ubuntu:bionic
 
+RUN echo 'Etc/UTC' > /etc/timezone && \
+    ln -s /usr/share/zoneinfo/Etc/UTC /etc/localtime && \
+    apt-get update && apt-get install -q -y tzdata && rm -rf /var/lib/apt/lists/*
+
+
 # install packages
 RUN apt-get update && apt-get install -q -y \
     dirmngr \
