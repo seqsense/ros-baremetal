@@ -1,3 +1,3 @@
-# Baremetal ROS Docker Images
+# [OBSOLETED] Baremetal ROS Docker Images
 
 only bootstrap tools, no ros packages
